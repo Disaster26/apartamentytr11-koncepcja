@@ -446,7 +446,7 @@ form.wys .ok{display:block}
    </div>
    <div class="cta">
     <a class="btn" href="tel:+48693603604"><svg><use href="#i-tel"/></svg>Zadzwoń</a>
-    <a class="btn ciem" href="https://www.google.com/maps/dir/?api=1&amp;destination=Targ+Rybny+11,+10-019+Olsztyn" target="_blank" rel="noopener">Wyznacz trasę</a>
+    <a class="btn ciem" href="https://www.google.com/maps/dir/?api=1&amp;destination=53.7773,20.4764" target="_blank" rel="noopener">Wyznacz trasę</a>
    </div>
   </div>
   <div class="mapa" id="mapa" role="region" aria-label="Mapa dojazdu: Targ Rybny 11, Olsztyn"></div>
@@ -500,7 +500,7 @@ lb.addEventListener('touchend',function(e){var d=e.changedTouches[0].clientX-tx;
 document.getElementById('zap').addEventListener('submit',function(e){e.preventDefault();this.classList.add('wys')});
 // mapa dopiero przy przewinieciu
 var m=document.getElementById('mapa');
-if('IntersectionObserver' in window){new IntersectionObserver(function(en,o){if(en[0].isIntersecting){o.disconnect();var f=document.createElement('iframe');f.title='Mapa: Targ Rybny 11, Olsztyn';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.src='https://maps.google.com/maps?q=Targ%20Rybny%2011%2C%2010-019%20Olsztyn&z=16&output=embed';m.appendChild(f)}},{rootMargin:'300px'}).observe(m)}
+if('IntersectionObserver' in window){new IntersectionObserver(function(en,o){if(en[0].isIntersecting){o.disconnect();var f=document.createElement('iframe');f.title='Mapa: Targ Rybny 11, Olsztyn';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.src='https://maps.google.com/maps?q=53.7773,20.4764&z=17&output=embed';m.appendChild(f)}},{rootMargin:'300px'}).observe(m)}
 // aktywna pozycja menu
 var L=[].slice.call(document.querySelectorAll('.menu a'));
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){L.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+x.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});L.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)io.observe(s)})}
